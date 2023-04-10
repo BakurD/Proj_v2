@@ -1,0 +1,15 @@
+---
+- name: install monitoring stack
+  hosts: _Name_Instance_in_Public_Subnet_with_OpenVPN
+  become: yes
+  roles:
+  - prometheus
+  - grafana
+
+
+- name: It will be install docker for my servers and node-exporter
+  hosts: _Name_WebServer_in_ASG
+  become: yes
+
+  roles:
+    - deploy_docker_and_maybe_Prom
