@@ -2,7 +2,7 @@
 plugin: aws_ec2
 aws_profile: default
 
-#regions:  us-east-1 #- add, after play script
+regions:  us-east-1 #- add, after play script
 
 
 filters:
